@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UnMeRide</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="icon" href="Images/favicon.ico">
+<!-- <script src="myscripts.js"></script> -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a href="#credit" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CREDIT SYSTEM</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button"  title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#customer" class="w3-bar-item w3-button">CUSTOMER REVIEWS</a>
+        <a href="#FAQ" class="w3-bar-item w3-button">FAQ</a>
+        <a href="#" class="w3-bar-item w3-button">CAR RENTALS</a>
+      </div>
+    </div>
+      <!-- <div class="menu" style="width: 100%; height:65px;" >
+        <div class="menu-content">
+        </div>
+        <a href="#">Login</a> | <a href="#">Register</a>
+
+      </div>
+      <div>
+        <form class="" action="index.html" method="post">
+
+        </form>
+
+    </div> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT US</a>
+  <a href="#credit" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CREDIT SYSTEM</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CAR RENTALS</a>
+</div>
+<div class="top" style= "height:1100px;">
+
+  <video id ="myvideo" src="Images/induction.mp4" muted loop autoplay></video>
+  <div class="showcase">
+      <h1 class="logo">UnMeRide</h1>
+      <div class="toggle"></div>
+  <div class="overlay"></div>
+  <div class="text">
+  <div class="word" style="height:100%">
+    <h2>
+    <a href="" class="typewrite" data-period="2000" data-type='[ "Pocket Friendly", "Eco Friendly", "User Friendly"]'>
+      <span class="wrap"></span>
+    </a>
+    <script type="text/javascript">
+    var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+    </script>
+  </h2>
+    <p style="width:70%; font-size:20px">UnMeRide is our idea to make carpooling much easier to use by common people.
+      It takes up the most hectic job involved in carpooling, ride searching. UnMeRide searches rides for you and provides a mechanism to connect you to the ride provider. You get the benefit of traveling NOT alone, decreased travel budget, sense of contribution towards environment ( surely something you could tell about to future generations).
+      
+      </p>
+      <br>
+      <h2 style="color:#79DAE8; text-decoration:underline">Why UnMeRide?</h2>
+      <ul style="font-size: 20px;">
+        <li>Get a ride cheaper than any other alternative</li>
+        <li>Save money on fuel
+        </li>
+        <li>Real Time working
+        </li>
+        <li>Safe to travel with known acquaintances</li>
+       
+      </ul>
+  </div>
+</div>
+</div>
+<!-- map section -->
+<div class="w3-content" style="max-width:2000px;margin-top:22px">
+   </div>
+  </div>
+  <!--Give\get ride buttons-->
+<div class="options" style="background: #E8F9FD; margin-top: 25px;">
+  <div class="Give ride" style="background:#0AA1DD; height: 50px">
+    <a href="login_page.php" style="width:120%; height:150%">Give a ride</a>
+  </div>
+  <div class="Take ride" style="background:#0AA1DD">
+    <a href="login_page1.php" style="width:120%; height:150%">Take a ride</a>
+  </div>
+</div>
+<style media="screen">
+  .options{
+    display: flex;
+    justify-content: space-around;
+  }
+  .w3-content{
+  }
+  .ride{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+</style>
+  <!-- The about us Section -->
+  <div class="box" style="display: flex; flex-direction: row">
+  <div class="w3-container w3-content-margin-left:70 w3-text-align: center w3-padding-64" style=" padding-left: 3%;padding-right: 10%;background-color: #E8F9FD" id="about">
+    <h2 class="w3-wide-bold">ABOUT US</h2>
+    <p class="w3-opacity"><i>Offering a hastle free travel with your friends and family</i></p>
+    <p class="w3-justify" style="font-size:20px"> Team Y_SAVY is proud to come up with this idea. We are a group of crazy IITians just looking to do something good for society. It is the very objective of UnMeRide. Just as an idea comes to mind with no good reason we also were discussing this idea as nothing more than a fantasy. Suddenly, it became serious and we decided to build this platform. 
+      That is how an idea became reality.</p>
+    <br>
+
+
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+
+        <img src="Images/car1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+
+      </div>
+      <div class="w3-third">
+
+        <img src="Images/car2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:75%">
+
+      </div>
+      <div class="w3-third">
+
+        <img src="Images/car3.jpg" class="w3-round" alt="Random Name" style="width:90%">
+
+      </div>
+    </div>
+  </div>
+
+
+<!--  <div class="w3-row w3-padding-32" style=" width: 900px;height: 713px;background-color: #E8F9FD;">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 5px;
+      margin: 6px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+    </style>
+    </head>
+    <body>
+
+    <h2 style="text-align:center;">Login Form</h2>
+
+    <form action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="Images/android-chrome-192x192.png" alt="login-photo">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Phone number</b></label>
+        <input type="text" placeholder="Enter Phone number" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" style="background-color:#112B3C">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style= "background-color:#E8F9FD">
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+    </form>
+
+  </div>
+-->
+      </div>
+
+  <!-- The Credit sytem Section -->
+  <div class="w3-black" id="credit">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">CREDIT SYSTEM</h2>
+      <p class="w3-opacity w3-center"><i>What differentiates us from others out there?</i></p><br>
+      <p accesskey="">Our App works on a credit-based system. 
+
+        With each ride given the consumer will receive a certain number of credit points to his account. On the other hand, if the consumer is opting for a ride then a certain number of credit points will be deducted from his account for each ride
+        
+        As a starter, 100 credit points will be given to all the customers who make an account in our app
+        
+        If the credit points in one account is exhausted then the consumer should remit a certain amount to buy  credit points</p>
+        <br>
+        <p>OUR PROFIT:-</p>
+        <p>
+          Let the credit points earned by the driver be m per km.
+          Let the credit points used by the user be n per km.
+          Let the traveled distance be k km.
+          So the total profit earned is (n-m)*k.
+          
+          In the above case, the profit will be = (5-4)*2.6 = 3 credit points earned.</p>
+
+
+      </div>
+    </div>
+
+
+  <!-- Ticket Modal -->
+  <!-- <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div> -->
+
+  <!--The customer reviews section-->
+  <div class="w3-light" id="customer">
+    <div class="w3-container w3-content w3-padding-64 text-white" style= "max-width: 800px; background-color:#E8F9FD">
+    <h2 class="w3-wide w3-center">CUSTOMER REVIEWS</h2>
+    <ul>
+      <li class="w3-text-dark" style="font-weight: bold; margin-top:30px "> Sumit Sinha, IIT(ISM)
+      </li>
+      <p class="w3-justify">“Made life easy. No more waiting for cabs and buses. Great app to get to know people from the same organization. Keep rocking 😀 "
+      </p>
+
+    <li class="w3-text-dark" style="font-weight: bold; margin-top:30px ">Achintya Arya IIT(ISM)</li>
+    <p class="w3-justify">Quickride has been a boon to so many and likewise for me as I can travel to office daily making friends and networking
+    </p>
+
+  <li class="w3-text-dark" style="font-weight: bold; margin-top:30px ">Siddhartha Kumar, Lucknow</li>
+  <p class="w3-justify">
+    Best carpooling app in Lucknow. Made lots of friends. Its a big relief to have friends to talk to when stuck in traffic.
+</p>
+
+</ul>
+    </div>
+
+<!-- FAQ-->
+<div class= "w3-black" id="FAQ">
+<div class="w3-container w3-content w3-padding-64 text white">
+  <h2 class="w3-wide w3-center">FAQ</h2>
+  <div class="accordion w-100" id="basicAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+        1.Is carpooling safe?
+
+      </button>
+    </h2>
+    <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+      data-mdb-parent="#basicAccordion" style="">
+      <div class="accordion-body">
+        <strong>You can opt to travel with people you know. It is safer when you travel with people you know.
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion w-100" id="basicAccordion">
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+      data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+    2.Is there any UnMeRide app which I can use?
+
+    </button>
+  </h2>
+  <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+    data-mdb-parent="#basicAccordion" style="">
+    <div class="accordion-body">
+      <strong>We are working on the app too. It will be released soon</strong> 
+    </div>
+  </div>
+</div>
+</div>
+<div class="accordion w-100" id="basicAccordion">
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+      data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+      3.How do we pay for a ride?
+
+    </button>
+  </h2>
+  <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+    data-mdb-parent="#basicAccordion" style="">
+    <div class="accordion-body">
+      <strong>The cost is covered by a credit system. Coins are awarded for giving rides, Coins are deducted for taking rides. You can buy coins from us</strong> 
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT US</h2>
+    <p class="w3-opacity w3-center"><i>Fell free to drop your doubts and queries here</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Dhanbad, Jharkhand<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9349695999<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: y_savy@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank" style= "height:50px">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px;padding: 20px;background-color:#F2F2F2">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          </div>
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity w3-padding"></i>
+  <i class="fa fa-instagram w3-hover-opacity w3-padding"></i>
+  <i class="fa fa-snapchat w3-hover-opacity w3-padding"></i>
+  <i class="fa fa-twitter w3-hover-opacity w3-padding"></i>
+  <i class="fa fa-linkedin w3-hover-opacity w3-padding"></i>
+  <p class="w3-medium">Maintained by Team <a href="https://github.com/vivo1001">Y SAVY</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
